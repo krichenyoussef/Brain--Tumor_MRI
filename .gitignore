@@ -1,2 +1,20 @@
+# Data and model weights stay out of git
+data/
+checkpoints/
+*.pt
+*.pth
 
-products.csv
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Gradio / editors
+.gradio/
+flagged/
+.vscode/
+.idea/
+.DS_Store
