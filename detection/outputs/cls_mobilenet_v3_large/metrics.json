@@ -1,0 +1,17 @@
+{
+  "arch": "mobilenet_v3_large",
+  "params_m": 4.21,
+  "test_acc": 0.9475,
+  "macro_f1": 0.9462,
+  "recall": {
+    "glioma": 0.81,
+    "meningioma": 0.985,
+    "notumor": 0.9975,
+    "pituitary": 0.9975
+  },
+  "best_val_acc": 0.9946,
+  "train_time_s": 150,
+  "latency_bs1_ms": 5.01,
+  "throughput_bs32_img_s": 1774.0,
+  "epochs": 8
+}

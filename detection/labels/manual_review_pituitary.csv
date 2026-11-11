@@ -1,0 +1,81 @@
+split,cls,file,verdict,x1p,y1p,x2p,y2p,note
+Training,pituitary,Tr-pi_1339.jpg,fix,42,41,56,55,
+Training,pituitary,Tr-pi_1226.jpg,ok,,,,,
+Training,pituitary,Tr-pi_621.jpg,fix,44,35,57,47,auto box on brainstem
+Training,pituitary,Tr-pi_1387.jpg,fix,38,44,51,61,
+Training,pituitary,Tr-pi_1110.jpg,fix,41,32,58,47,auto on cerebellum; medium confidence
+Training,pituitary,Tr-pi_991.jpg,drop,,,,,slice above sella
+Training,pituitary,Tr-pi_104.jpg,drop,,,,,mass not visible
+Training,pituitary,Tr-pi_741.jpg,drop,,,,,mass not visible
+Training,pituitary,Tr-pi_522.jpg,ok,,,,,
+Training,pituitary,Tr-pi_882.jpg,fix,41,50,51,64,auto too tall
+Training,pituitary,Tr-pi_1185.jpg,drop,,,,,mass not visible
+Training,pituitary,Tr-pi_217.jpg,ok,,,,,
+Training,pituitary,Tr-pi_1127.jpg,ok,,,,,
+Training,pituitary,Tr-pi_145.jpg,fix,44,42,54,56,
+Training,pituitary,Tr-pi_1130.jpg,ok,,,,,
+Training,pituitary,Tr-pi_930.jpg,ok,,,,,
+Training,pituitary,Tr-pi_293.jpg,drop,,,,,mass not visible
+Training,pituitary,Tr-pi_384.jpg,fix,43,46,55,58,T2 slice
+Training,pituitary,Tr-pi_542.jpg,fix,40,42,62,63,auto too large
+Training,pituitary,Tr-pi_1330.jpg,drop,,,,,mass not visible
+Training,pituitary,Tr-pi_667.jpg,fix,43,38,60,49,auto on brainstem; medium confidence
+Training,pituitary,Tr-pi_6.jpg,ok,,,,,
+Training,pituitary,Tr-pi_1070.jpg,ok,,,,,
+Training,pituitary,Tr-pi_838.jpg,ok,,,,,
+Training,pituitary,Tr-pi_1184.jpg,ok,,,,,
+Training,pituitary,Tr-pi_46.jpg,drop,,,,,mass not visible
+Training,pituitary,Tr-pi_1366.jpg,ok,,,,,
+Training,pituitary,Tr-pi_4.jpg,ok,,,,,
+Training,pituitary,Tr-pi_605.jpg,fix,43,38,56,46,auto on midbrain
+Training,pituitary,Tr-pi_789.jpg,ok,,,,,
+Training,pituitary,Tr-pi_131.jpg,fix,46,42,54,50,auto on midbrain
+Training,pituitary,Tr-pi_979.jpg,fix,42,47,53,61,auto too large
+Training,pituitary,Tr-pi_1373.jpg,ok,,,,,
+Training,pituitary,Tr-pi_1104.jpg,ok,,,,,
+Training,pituitary,Tr-pi_985.jpg,fix,47,54,60,66,auto on skull base; medium confidence
+Training,pituitary,Tr-pi_1290.jpg,fix,45,53,56,63,auto on carotid side; medium confidence
+Training,pituitary,Tr-pi_1297.jpg,fix,46,40,58,53,auto on skull base
+Training,pituitary,Tr-pi_37.jpg,ok,,,,,
+Training,pituitary,Tr-pi_714.jpg,fix,56,46,69,61,auto too large
+Training,pituitary,Tr-pi_20.jpg,fix,50,51,64,63,auto too large; medium confidence
+Training,pituitary,Tr-pi_1214.jpg,ok,,,,,
+Training,pituitary,Tr-pi_839.jpg,drop,,,,,mass not visible
+Training,pituitary,Tr-pi_553.jpg,ok,,,,,
+Training,pituitary,Tr-pi_966.jpg,ok,,,,,
+Training,pituitary,Tr-pi_1320.jpg,ok,,,,,
+Training,pituitary,Tr-pi_1022.jpg,drop,,,,,mass not visible
+Training,pituitary,Tr-pi_607.jpg,drop,,,,,mass not visible
+Training,pituitary,Tr-pi_995.jpg,ok,,,,,
+Training,pituitary,Tr-pi_494.jpg,ok,,,,,
+Training,pituitary,Tr-pi_788.jpg,fix,45,50,56,61,auto shifted left
+Training,pituitary,Tr-pi_676.jpg,drop,,,,,mass not visible
+Training,pituitary,Tr-pi_311.jpg,fix,38,49,48,59,auto on clivus; medium confidence
+Training,pituitary,Tr-pi_935.jpg,fix,44,38,55,47,auto on brainstem
+Training,pituitary,Tr-pi_397.jpg,fix,42,40,58,57,auto on skull base
+Training,pituitary,Tr-pi_454.jpg,drop,,,,,mass not visible
+Training,pituitary,Tr-pi_950.jpg,fix,33,46,45,62,auto too large; medium confidence
+Training,pituitary,Tr-pi_1281.jpg,ok,,,,,
+Training,pituitary,Tr-pi_772.jpg,ok,,,,,
+Training,pituitary,Tr-pi_1020.jpg,fix,47,36,58,47,auto on midbrain
+Training,pituitary,Tr-pi_582.jpg,drop,,,,,mass not visible
+Testing,pituitary,Te-pi_80.jpg,fix,45,29,62,43,auto on cerebellum; medium confidence
+Testing,pituitary,Te-pi_135.jpg,ok,,,,,
+Testing,pituitary,Te-pi_253.jpg,fix,54,54,64,63,auto on clivus
+Testing,pituitary,Te-pi_8.jpg,drop,,,,,mass not visible
+Testing,pituitary,Te-pi_12.jpg,ok,,,,,
+Testing,pituitary,Te-pi_35.jpg,ok,,,,,
+Testing,pituitary,Te-pi_228.jpg,fix,45,50,57,64,auto on sphenoid
+Testing,pituitary,Te-pi_161.jpg,ok,,,,,
+Testing,pituitary,Te-pi_209.jpg,fix,49,56,61,68,auto too large
+Testing,pituitary,Te-pi_90.jpg,fix,57,52,66,62,auto on clivus
+Testing,pituitary,Te-pi_320.jpg,fix,54,57,63,67,auto on clivus
+Testing,pituitary,Te-pi_261.jpg,fix,43,64,57,75,auto too large; medium confidence
+Testing,pituitary,Te-pi_380.jpg,fix,52,46,64,63,auto too tall
+Testing,pituitary,Te-pi_231.jpg,drop,,,,,mass not visible
+Testing,pituitary,Te-pi_49.jpg,ok,,,,,
+Testing,pituitary,Te-pi_264.jpg,fix,46,33,59,45,auto on midbrain; medium confidence
+Testing,pituitary,Te-pi_371.jpg,ok,,,,,
+Testing,pituitary,Te-pi_391.jpg,drop,,,,,mass not visible
+Testing,pituitary,Te-pi_385.jpg,fix,54,58,64,67,auto on clivus
+Testing,pituitary,Te-pi_16.jpg,fix,51,47,66,62,auto below mass

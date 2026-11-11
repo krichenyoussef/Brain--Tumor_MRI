@@ -1,0 +1,17 @@
+{
+  "arch": "convnext_tiny",
+  "params_m": 27.82,
+  "test_acc": 0.9581,
+  "macro_f1": 0.9572,
+  "recall": {
+    "glioma": 0.8425,
+    "meningioma": 0.9925,
+    "notumor": 1.0,
+    "pituitary": 0.9975
+  },
+  "best_val_acc": 0.9946,
+  "train_time_s": 364,
+  "latency_bs1_ms": 5.8,
+  "throughput_bs32_img_s": 401.9,
+  "epochs": 8
+}

@@ -1,0 +1,144 @@
+split,cls,file,x1,y1,x2,y2,note
+Training,glioma,Tr-gl_448.jpg,,,,,no clear lesion
+Training,glioma,Tr-gl_513.jpg,,,,,no clear lesion
+Training,glioma,Tr-gl_1072.jpg,,,,,no clear lesion
+Training,glioma,Tr-gl_215.jpg,,,,,box on sella; no lesion seen
+Training,glioma,Tr-gl_681.jpg,287,138,369,236,enhancing lesion right upper
+Training,glioma,Tr-gl_634.jpg,,,,,subtle only
+Training,glioma,Tr-gl_485.jpg,,,,,no clear lesion
+Training,glioma,Tr-gl_399.jpg,215,215,276,271,ring lesion; auto box too large
+Training,glioma,Tr-gl_1400.jpg,,,,,unclear
+Training,glioma,Tr-gl_669.jpg,,,,,no clear lesion
+Training,glioma,Tr-gl_1255.jpg,266,138,328,205,auto box too large
+Training,glioma,Tr-gl_258.jpg,276,174,404,276,auto box covers only part
+Training,glioma,Tr-gl_1256.jpg,276,189,410,369,auto box on ventricle
+Training,glioma,Tr-gl_879.jpg,210,200,266,292,subtle heterogeneous area
+Training,glioma,Tr-gl_20.jpg,276,154,348,220,hypointense lesion
+Training,glioma,Tr-gl_72.jpg,128,189,251,317,mass on other side of auto box
+Training,glioma,Tr-gl_848.jpg,,,,,no clear lesion
+Training,glioma,Tr-gl_31.jpg,154,154,256,287,subtle mass effect
+Training,glioma,Tr-gl_1180.jpg,,,,,no clear lesion
+Training,glioma,Tr-gl_1134.jpg,,,,,no clear lesion
+Training,glioma,Tr-gl_347.jpg,276,138,358,220,
+Training,glioma,Tr-gl_608.jpg,241,241,292,302,ring lesion; auto box too large
+Training,glioma,Tr-gl_770.jpg,,,,,no clear lesion
+Training,glioma,Tr-gl_1184.jpg,,,,,no clear lesion
+Training,glioma,Tr-gl_390.jpg,,,,,no clear lesion
+Training,glioma,Tr-gl_320.jpg,,,,,no clear lesion
+Training,glioma,Tr-gl_865.jpg,,,,,no clear lesion
+Training,glioma,Tr-gl_1375.jpg,292,133,353,200,ring lesion; auto box too large
+Training,glioma,Tr-gl_757.jpg,205,195,307,266,
+Training,glioma,Tr-gl_554.jpg,,,,,no clear lesion
+Training,glioma,Tr-gl_7.jpg,266,169,358,276,cystic area
+Training,glioma,Tr-gl_218.jpg,164,133,256,236,ring lesion
+Training,glioma,Tr-gl_1112.jpg,174,215,256,292,
+Training,glioma,Tr-gl_970.jpg,312,164,379,241,ring lesion; auto box too large
+Training,glioma,Tr-gl_891.jpg,,,,,box on skull base; no lesion seen
+Training,glioma,Tr-gl_100.jpg,,,,,subtle only
+Training,glioma,Tr-gl_867.jpg,,,,,no clear lesion
+Training,glioma,Tr-gl_648.jpg,,,,,no clear lesion
+Training,glioma,Tr-gl_188.jpg,333,210,389,271,ring lesion; auto box too large
+Training,glioma,Tr-gl_338.jpg,,,,,no clear lesion
+Training,glioma,Tr-gl_785.jpg,287,169,379,287,
+Training,glioma,Tr-gl_147.jpg,,,,,box on sella; no lesion seen
+Training,glioma,Tr-gl_178.jpg,179,102,236,164,ring lesion outside auto box
+Training,glioma,Tr-gl_1260.jpg,323,159,404,266,cystic area; moderate confidence
+Training,glioma,Tr-gl_74.jpg,,,,,uncertain
+Testing,glioma,Te-gl_136.jpg,,,,,no clear lesion
+Testing,glioma,Te-gl_246.jpg,,,,,unclear
+Testing,glioma,Te-gl_333.jpg,,,,,no clear lesion
+Testing,glioma,Te-gl_324.jpg,,,,,no clear lesion
+Testing,glioma,Te-gl_353.jpg,225,276,338,389,posterior fossa mass; auto box on orbit
+Testing,glioma,Te-gl_233.jpg,143,159,241,256,cystic ring lesion
+Testing,glioma,Te-gl_64.jpg,,,,,box on sella; no lesion seen
+Testing,glioma,Te-gl_351.jpg,74,157,155,255,auto box in image corner
+Testing,glioma,Te-gl_348.jpg,,,,,no clear lesion
+Testing,glioma,Te-gl_377.jpg,215,200,323,297,
+Testing,glioma,Te-gl_37.jpg,,,,,box on sella; no lesion seen
+Testing,glioma,Te-gl_303.jpg,100,110,144,157,T2 slice; auto box in image corner
+Testing,glioma,Te-gl_374.jpg,,,,,unclear
+Training,meningioma,Tr-me_322.jpg,,,,,no clear mass visible
+Training,meningioma,Tr-me_184.jpg,,,,,mass not confidently visible
+Training,meningioma,Tr-me_1247.jpg,128,133,215,220,box missed lower lobe
+Training,meningioma,Tr-me_1257.jpg,256,143,389,307,box covered only part of large mass
+Training,meningioma,Tr-me_1252.jpg,256,184,353,266,box too low and large
+Training,meningioma,Tr-me_949.jpg,251,92,312,159,box too large
+Training,meningioma,Tr-me_217.jpg,189,220,287,323,box too wide
+Training,meningioma,Tr-me_1073.jpg,97,164,143,220,box next to mass
+Training,meningioma,Tr-me_990.jpg,138,312,215,394,box too large
+Training,meningioma,Tr-me_1148.jpg,143,133,174,164,small nodule; box too large
+Training,meningioma,Tr-aug-me_80.jpg,128,118,282,230,box shifted right
+Training,meningioma,Tr-me_70.jpg,179,200,261,287,box too large
+Training,meningioma,Tr-me_172.jpg,292,92,384,174,box missed upper part
+Training,meningioma,Tr-me_991.jpg,266,256,338,353,box covered only part of mass
+Training,meningioma,Tr-me_569.jpg,148,138,261,236,box shifted right
+Training,meningioma,Tr-me_956.jpg,133,230,256,379,box covered only right half
+Training,meningioma,Tr-me_397.jpg,143,113,210,225,box missed upper part
+Training,meningioma,Tr-me_1120.jpg,148,61,256,179,box missed upper part
+Training,meningioma,Tr-me_820.jpg,189,261,292,323,box included sinus below
+Training,meningioma,Tr-me_1259.jpg,148,92,287,215,box shifted right and low
+Training,meningioma,Tr-me_186.jpg,156,0,249,119,T2 slice; box included edema
+Training,meningioma,Tr-me_423.jpg,,,,,no clear mass visible
+Training,meningioma,Tr-me_351.jpg,,,,,low slice; mass not confidently visible
+Training,meningioma,Tr-me_1022.jpg,189,102,271,174,box too large
+Training,meningioma,Tr-me_1094.jpg,148,174,236,261,box too large
+Training,meningioma,Tr-me_141.jpg,154,200,287,307,box covered only part of mass
+Testing,meningioma,Te-me_30.jpg,151,130,214,182,box included sinus below
+Testing,meningioma,Te-me_252.jpg,21,52,96,135,box missed upper left part
+Testing,meningioma,Te-me_284.jpg,205,138,282,210,box too large
+Testing,meningioma,Te-me_52.jpg,60,235,140,306,box shifted right and low
+Testing,meningioma,Te-aug-me_63.jpg,,,,,no clear mass visible
+Testing,meningioma,Te-me_31.jpg,92,47,133,86,T2 slice; box on wrong region
+Testing,meningioma,Te-aug-me_61.jpg,302,271,364,328,box below mass
+Testing,meningioma,Te-me_187.jpg,146,111,258,254,box covered only part of mass
+Testing,meningioma,Te-aug-me_6.jpg,292,148,343,205,box too large
+Training,pituitary,Tr-pi_1339.jpg,215,210,287,282,
+Training,pituitary,Tr-pi_621.jpg,225,179,292,241,auto box on brainstem
+Training,pituitary,Tr-pi_1387.jpg,195,225,261,312,
+Training,pituitary,Tr-pi_1110.jpg,210,164,297,241,auto on cerebellum; medium confidence
+Training,pituitary,Tr-pi_991.jpg,,,,,slice above sella
+Training,pituitary,Tr-pi_104.jpg,,,,,mass not visible
+Training,pituitary,Tr-pi_741.jpg,,,,,mass not visible
+Training,pituitary,Tr-pi_882.jpg,210,256,261,328,auto too tall
+Training,pituitary,Tr-pi_1185.jpg,,,,,mass not visible
+Training,pituitary,Tr-pi_145.jpg,225,215,276,287,
+Training,pituitary,Tr-pi_293.jpg,,,,,mass not visible
+Training,pituitary,Tr-pi_384.jpg,574,599,734,755,T2 slice
+Training,pituitary,Tr-pi_542.jpg,90,94,140,142,auto too large
+Training,pituitary,Tr-pi_1330.jpg,,,,,mass not visible
+Training,pituitary,Tr-pi_667.jpg,220,195,307,251,auto on brainstem; medium confidence
+Training,pituitary,Tr-pi_46.jpg,,,,,mass not visible
+Training,pituitary,Tr-pi_605.jpg,220,195,287,236,auto on midbrain
+Training,pituitary,Tr-pi_131.jpg,236,215,276,256,auto on midbrain
+Training,pituitary,Tr-pi_979.jpg,215,241,271,312,auto too large
+Training,pituitary,Tr-pi_985.jpg,241,276,307,338,auto on skull base; medium confidence
+Training,pituitary,Tr-pi_1290.jpg,230,271,287,323,auto on carotid side; medium confidence
+Training,pituitary,Tr-pi_1297.jpg,236,205,297,271,auto on skull base
+Training,pituitary,Tr-pi_714.jpg,287,236,353,312,auto too large
+Training,pituitary,Tr-pi_20.jpg,256,261,328,323,auto too large; medium confidence
+Training,pituitary,Tr-pi_839.jpg,,,,,mass not visible
+Training,pituitary,Tr-pi_1022.jpg,,,,,mass not visible
+Training,pituitary,Tr-pi_607.jpg,,,,,mass not visible
+Training,pituitary,Tr-pi_788.jpg,230,256,287,312,auto shifted left
+Training,pituitary,Tr-pi_676.jpg,,,,,mass not visible
+Training,pituitary,Tr-pi_311.jpg,195,251,246,302,auto on clivus; medium confidence
+Training,pituitary,Tr-pi_935.jpg,225,195,282,241,auto on brainstem
+Training,pituitary,Tr-pi_397.jpg,147,160,203,228,auto on skull base
+Training,pituitary,Tr-pi_454.jpg,,,,,mass not visible
+Training,pituitary,Tr-pi_950.jpg,169,236,230,317,auto too large; medium confidence
+Training,pituitary,Tr-pi_1020.jpg,241,184,297,241,auto on midbrain
+Training,pituitary,Tr-pi_582.jpg,,,,,mass not visible
+Testing,pituitary,Te-pi_80.jpg,230,148,317,220,auto on cerebellum; medium confidence
+Testing,pituitary,Te-pi_253.jpg,276,276,328,323,auto on clivus
+Testing,pituitary,Te-pi_8.jpg,,,,,mass not visible
+Testing,pituitary,Te-pi_228.jpg,230,256,292,328,auto on sphenoid
+Testing,pituitary,Te-pi_209.jpg,251,287,312,348,auto too large
+Testing,pituitary,Te-pi_90.jpg,292,266,338,317,auto on clivus
+Testing,pituitary,Te-pi_320.jpg,276,292,323,343,auto on clivus
+Testing,pituitary,Te-pi_261.jpg,110,164,146,192,auto too large; medium confidence
+Testing,pituitary,Te-pi_380.jpg,266,236,328,323,auto too tall
+Testing,pituitary,Te-pi_231.jpg,,,,,mass not visible
+Testing,pituitary,Te-pi_264.jpg,236,169,302,230,auto on midbrain; medium confidence
+Testing,pituitary,Te-pi_391.jpg,,,,,mass not visible
+Testing,pituitary,Te-pi_385.jpg,276,297,328,343,auto on clivus
+Testing,pituitary,Te-pi_16.jpg,261,241,338,317,auto below mass
