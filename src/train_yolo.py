@@ -24,4 +24,6 @@ if __name__ == "__main__":
     model = YOLO("yolo11n.pt")
     model.train(data=str(ROOT / f"yolo_{mode}" / "data.yaml"), imgsz=512, epochs=epochs, batch=16,
                 project=str(ROOT / "outputs" / "yolo"), name=mode, exist_ok=True, seed=0,
-                workers=4, patience=0, plots=True, verbose=False)
+                workers=2, patience=0, plots=True, verbose=False)
+    # workers=2: each worker is a full Python+CUDA process (~1 GB of committed memory on Windows);
+    # with 4 the 16 GB laptop ran out of paging file when the loaders restarted at close_mosaic.

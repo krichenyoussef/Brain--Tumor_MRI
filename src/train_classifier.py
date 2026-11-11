@@ -82,7 +82,8 @@ def main():
     train_ds = Subset(full_train, tr_idx)
     val_ds = Subset(full_val, va_idx)
 
-    kw = dict(batch_size=BATCH, num_workers=4, pin_memory=True, persistent_workers=True)
+    # 2 workers per loader: on Windows each worker is a full Python+torch process (~1 GB committed memory)
+    kw = dict(batch_size=BATCH, num_workers=2, pin_memory=True, persistent_workers=True)
     train_dl = DataLoader(train_ds, shuffle=True, **kw)
     val_dl = DataLoader(val_ds, shuffle=False, **kw)
     test_dl = DataLoader(test_ds, shuffle=False, **kw)
