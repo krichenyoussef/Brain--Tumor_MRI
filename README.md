@@ -1,6 +1,6 @@
-# Brain Tumor MRI Classification
+# Brain Tumor MRI: Classification and Tumor Localization
 
-![CI](https://github.com/krichenyoussef/data_cleaning-/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/krichenyoussef/Brain--Tumor_MRI/actions/workflows/ci.yml/badge.svg)
 
 Classifies brain MRI slices into **glioma, meningioma, pituitary tumor or no tumor**, with a focus on what
 matters in medical imaging: a test set free of duplicate images, the number of **missed tumors**, calibrated
@@ -9,9 +9,47 @@ confidence, and **Grad-CAM** heatmaps that show where the model looked.
 Three transfer-learning backbones are compared on the same clean split: **ResNet-50**, **EfficientNet-B0**
 and a small **Vision Transformer (ViT-S/16)**.
 
+The [`detection/`](detection/) folder adds **tumor localization**: a bounding box around the tumor.
+The dataset has no box labels, so they were built from Grad-CAM heatmaps, checked by hand on 240 images,
+and used to train YOLO detectors. A benchmark compares four localization methods and four classifier backbones.
+
 > Research and education only. This is not a medical device and must not be used for diagnosis.
 
 ## Results
+
+### Tumor localization
+
+Scored against 48 human-reviewed test boxes plus 20 no-tumor images. A box counts as correct when it overlaps
+the reviewed box by at least 50% and has the right class (mAP@0.5).
+
+| Method | mAP@0.5 | 95% interval | Tumor images boxed correctly | ms / image |
+|---|---:|---:|---:|---:|
+| Grad-CAM, raw | 0.03 | 0.00 to 0.10 | 10% | 29 |
+| Grad-CAM + brightness refinement | 0.40 | 0.26 to 0.59 | 54% | 38 |
+| YOLO11n trained on 5,559 automatic boxes | 0.54 | 0.39 to 0.69 | 60% | 15 |
+| YOLO11n trained on 199 reviewed boxes | **0.68** | 0.55 to 0.81 | **69%** | **11** |
+
+![Detection mAP@0.5 by method](detection/outputs/bench_detection.png)
+
+A small set of clean boxes beat a large set of noisy ones. The test set is small, so the intervals overlap.
+Full results and caveats: [detection/BENCHMARK.md](detection/BENCHMARK.md).
+
+### Classification on the original Kaggle split
+
+Four backbones trained with identical settings, 8 epochs, tested on the 1,600 Kaggle Testing images.
+This split may contain duplicates of training images, so treat these numbers as an upper bound.
+
+| Backbone | Params (M) | Accuracy | Macro F1 | Glioma recall | Images / s |
+|---|---:|---:|---:|---:|---:|
+| ConvNeXt-Tiny | 27.8 | **95.8%** | **0.957** | **84.2%** | 402 |
+| EfficientNet-B0 | 4.0 | 95.1% | 0.950 | 82.0% | 1,015 |
+| ResNet-50 | 23.5 | 95.0% | 0.949 | 81.2% | 498 |
+| MobileNetV3-Large | 4.2 | 94.8% | 0.946 | 81.0% | **1,774** |
+
+Every backbone misses 16 to 19% of gliomas while the other classes stay near 99 to 100%. The problem comes from
+the data, not the architecture.
+
+### Classification on the clean, duplicate-free split
 
 Run the pipeline (below), then paste the table from `results/RESULTS.md` here.
 
@@ -104,19 +142,17 @@ The Kaggle dataset has no box labels, so they were built in three stages:
    About 60% of the automatic boxes matched the reviewed box.
 3. **YOLO-format datasets** for training a detector.
 
-A benchmark on the human-reviewed test boxes then compares four ways of locating the tumor:
-
-| Method | mAP@0.5 | ms / image |
-|---|---:|---:|
-| Grad-CAM, raw | 0.03 | 29 |
-| Grad-CAM + brightness refinement | 0.40 | 38 |
-| YOLO11n trained on 5,559 automatic boxes | 0.54 | 15 |
-| YOLO11n trained on 199 reviewed boxes | **0.68** | **11** |
-
-A small set of clean boxes beat a large set of noisy ones, though the test set is small (48 boxes).
+The results are in the [Results](#results) section above.
 See [detection/README.md](detection/README.md) for every step and [detection/BENCHMARK.md](detection/BENCHMARK.md)
-for the full results, caveats and a four-backbone classifier comparison.
+for the full benchmark and its caveats.
 The detection scripts read the images from the same `data/raw/` folder as this project.
+
+```bash
+cd detection
+pip install -r requirements.txt
+python src/train_classifier.py                       # about 10 min on a laptop GPU, saves outputs/model.pt
+python src/predict.py ../data/raw/Testing/glioma     # classify a folder of scans
+```
 
 ## Project structure
 
