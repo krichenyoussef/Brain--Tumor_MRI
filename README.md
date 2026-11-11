@@ -94,6 +94,30 @@ To publish it on **Hugging Face Spaces** (free): create a Gradio Space, then upl
 `app.py`, `app/requirements.txt` as `requirements.txt`, the `src/` folder, and your checkpoint as
 `checkpoints/best.pt`.
 
+## Tumor localization (`detection/`)
+
+The `detection/` folder goes one step further than classification: it draws a **bounding box around the tumor**.
+The Kaggle dataset has no box labels, so they were built in three stages:
+
+1. **Automatic boxes for all 5,400 tumor images,** from Grad-CAM heatmaps refined by tumor brightness.
+2. **Manual review of 240 images,** where each box was accepted, redrawn, or dropped when no tumor was visible.
+   About 60% of the automatic boxes matched the reviewed box.
+3. **YOLO-format datasets** for training a detector.
+
+A benchmark on the human-reviewed test boxes then compares four ways of locating the tumor:
+
+| Method | mAP@0.5 | ms / image |
+|---|---:|---:|
+| Grad-CAM, raw | 0.03 | 29 |
+| Grad-CAM + brightness refinement | 0.40 | 38 |
+| YOLO11n trained on 5,559 automatic boxes | 0.54 | 15 |
+| YOLO11n trained on 199 reviewed boxes | **0.68** | **11** |
+
+A small set of clean boxes beat a large set of noisy ones, though the test set is small (48 boxes).
+See [detection/README.md](detection/README.md) for every step and [detection/BENCHMARK.md](detection/BENCHMARK.md)
+for the full results, caveats and a four-backbone classifier comparison.
+The detection scripts read the images from the same `data/raw/` folder as this project.
+
 ## Project structure
 
 ```
@@ -109,6 +133,7 @@ src/
 app/app.py         # Gradio demo
 notebooks/         # Colab training notebook
 tests/             # pytest suite on synthetic images (runs in CI, no dataset needed)
+detection/         # bounding-box labels, YOLO datasets and benchmark (own README and requirements)
 ```
 
 ## Tests
