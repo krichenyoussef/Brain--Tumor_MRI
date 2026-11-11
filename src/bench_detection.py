@@ -167,7 +167,14 @@ def main():
     for name, fn in methods.items():
         preds, ms = fn()
         r = maps(preds, gt, names); r.update(image_level(preds, gt)); r["ms_per_image"] = ms
-        boots = [maps(preds, gt, list(rng.choice(names, len(names))))["mAP50"] for _ in range(1000)]
+        boots = []
+        for _ in range(1000):
+            # resample images with replacement; each drawn copy gets its own key so that a duplicated
+            # image contributes its ground-truth boxes and its predictions once per copy
+            draw = rng.choice(names, len(names))
+            gt_b = {f"{n}#{i}": gt[n] for i, n in enumerate(draw)}
+            pr_b = {f"{n}#{i}": preds[n] for i, n in enumerate(draw)}
+            boots.append(maps(pr_b, gt_b, list(gt_b))["mAP50"])
         r["mAP50_CI95"] = [float(np.percentile(boots, 2.5)), float(np.percentile(boots, 97.5))]
         res[name] = r; print(name, json.dumps(r), flush=True)
     json.dump(res, open(ROOT / "outputs" / "bench_detection.json", "w"), indent=2)

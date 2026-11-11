@@ -1,0 +1,17 @@
+{
+  "arch": "resnet50",
+  "params_m": 23.52,
+  "test_acc": 0.95,
+  "macro_f1": 0.9487,
+  "recall": {
+    "glioma": 0.8125,
+    "meningioma": 0.99,
+    "notumor": 1.0,
+    "pituitary": 0.9975
+  },
+  "best_val_acc": 0.9911,
+  "train_time_s": 295,
+  "latency_bs1_ms": 4.95,
+  "throughput_bs32_img_s": 497.8,
+  "epochs": 8
+}

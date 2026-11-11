@@ -1,0 +1,21 @@
+best val acc: 0.9946
+test acc: 0.9475
+
+              precision    recall  f1-score   support
+
+      glioma     1.0000    0.8100    0.8950       400
+  meningioma     0.8975    0.9850    0.9392       400
+     notumor     0.9194    0.9975    0.9568       400
+   pituitary     0.9901    0.9975    0.9938       400
+
+    accuracy                         0.9475      1600
+   macro avg     0.9517    0.9475    0.9462      1600
+weighted avg     0.9517    0.9475    0.9462      1600
+
+
+confusion matrix (rows=true, cols=pred)
+['glioma', 'meningioma', 'notumor', 'pituitary']
+[[324  43  32   1]
+ [  0 394   3   3]
+ [  0   1 399   0]
+ [  0   1   0 399]]

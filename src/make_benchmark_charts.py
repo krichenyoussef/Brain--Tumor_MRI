@@ -40,7 +40,7 @@ for y, k in zip(ys, names):
     ax.plot([hi, hi], [y - .12, y + .12], color=INK2, lw=1.5)
     ax.text(hi + 0.015, y, f"{r['mAP50']:.2f}", va="center", color=INK, fontsize=10)
 ax.set_yticks(list(ys)); ax.set_yticklabels([LABEL[k] for k in names])
-ax.set_xlim(0, 1.05); ax.set_xlabel("mAP@0.5 on the reviewed test set (bar) with 95% bootstrap interval (line)")
+ax.set_xlim(0, 1.05); ax.set_xlabel("mAP@0.5 on the reviewed test set; line = 95% bootstrap interval")
 ax.xaxis.grid(True, color=GRID, lw=0.8); ax.set_axisbelow(True); style(ax)
 ax.set_title("Detection: how well each method boxes the tumor", loc="left", color=INK, fontsize=11)
 fig.tight_layout(); fig.savefig(OUT / "bench_detection.png", dpi=150); plt.close(fig)
@@ -63,8 +63,9 @@ if cls:
     lo = min(min(m["test_acc"], m["recall"]["glioma"]) for m in cls)
     ax.set_ylim(max(0, lo - 0.08), 1.02); ax.yaxis.grid(True, color=GRID, lw=0.8); ax.set_axisbelow(True)
     ax.yaxis.set_major_formatter(matplotlib.ticker.PercentFormatter(1.0)); style(ax)
-    ax.legend(frameon=False, loc="lower right", ncol=2)
-    ax.set_title("Classification on the 1,600 test images (y-axis does not start at 0)", loc="left", color=INK, fontsize=11)
+    ax.legend(frameon=False, loc="lower left", bbox_to_anchor=(0, 1.0), ncol=2, borderaxespad=0.2)
+    ax.set_title("Classification on the 1,600 test images (y-axis does not start at 0)", loc="left", color=INK,
+                 fontsize=11, pad=26)
     fig.tight_layout(); fig.savefig(OUT / "bench_classifiers.png", dpi=150); plt.close(fig)
 
 # ---- YOLO training curves: val mAP50 per epoch (2 series) ----
@@ -75,7 +76,8 @@ for mode, col, lab in (("gold", S1, "199 reviewed imgs"), ("full", S2, "5,559 au
         continue
     rows = list(csv.DictReader(open(p))); rows = [{k.strip(): v for k, v in r.items()} for r in rows]
     ep = [int(float(r["epoch"])) for r in rows]; m = [float(r["metrics/mAP50(B)"]) for r in rows]
-    ax.plot(ep, m, color=col, lw=2, label=lab); ax.text(ep[-1] + 0.5, m[-1], lab, color=INK2, va="center", fontsize=8.5)
+    ax.plot(ep, m, color=col, lw=2, label=lab)
+    ax.text(ep[-1] + 1, m[-1] + 0.07, lab, color=INK2, va="center", fontsize=8.5)   # direct label above the line end
     any_curve = True
 if any_curve:
     ax.set_xlabel("epoch"); ax.set_ylabel("val mAP@0.5"); ax.set_ylim(0, 1)

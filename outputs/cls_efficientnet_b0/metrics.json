@@ -1,0 +1,17 @@
+{
+  "arch": "efficientnet_b0",
+  "params_m": 4.01,
+  "test_acc": 0.9513,
+  "macro_f1": 0.9502,
+  "recall": {
+    "glioma": 0.82,
+    "meningioma": 0.985,
+    "notumor": 1.0,
+    "pituitary": 1.0
+  },
+  "best_val_acc": 0.9982,
+  "train_time_s": 209,
+  "latency_bs1_ms": 6.49,
+  "throughput_bs32_img_s": 1015.1,
+  "epochs": 8
+}
