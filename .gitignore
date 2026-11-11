@@ -1,0 +1,30 @@
+# Dataset (download separately, see README)
+data/
+
+# Generated YOLO dataset copies (rebuild with src/build_yolo_dataset.py)
+yolo_full/
+yolo_gold/
+
+# Model weights
+*.pt
+*.pth
+yolo11n.pt
+
+# Large generated images (rebuild with src/annot_sheet.py, src/review_grid.py, src/eval_auto_vs_manual.py)
+outputs/annot/
+outputs/review/
+
+# Auto label files are reproducible from labels/auto_boxes.csv
+labels/auto/
+
+# Training logs with progress bars
+outputs/*_stdout.txt
+outputs/bench_log.txt
+
+# Python / OS
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+desktop.ini

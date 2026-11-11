@@ -1,0 +1,81 @@
+split,cls,file,verdict,x1p,y1p,x2p,y2p,note
+Training,glioma,Tr-gl_448.jpg,drop,,,,,no clear lesion
+Training,glioma,Tr-gl_513.jpg,drop,,,,,no clear lesion
+Training,glioma,Tr-gl_1072.jpg,drop,,,,,no clear lesion
+Training,glioma,Tr-gl_215.jpg,drop,,,,,box on sella; no lesion seen
+Training,glioma,Tr-gl_681.jpg,fix,56,27,72,46,enhancing lesion right upper
+Training,glioma,Tr-gl_634.jpg,drop,,,,,subtle only
+Training,glioma,Tr-gl_485.jpg,drop,,,,,no clear lesion
+Training,glioma,Tr-gl_298.jpg,ok,,,,,large cystic mass
+Training,glioma,Tr-gl_617.jpg,ok,,,,,
+Training,glioma,Tr-gl_399.jpg,fix,42,42,54,53,ring lesion; auto box too large
+Training,glioma,Tr-gl_813.jpg,ok,,,,,
+Training,glioma,Tr-gl_1400.jpg,drop,,,,,unclear
+Training,glioma,Tr-gl_669.jpg,drop,,,,,no clear lesion
+Training,glioma,Tr-gl_1255.jpg,fix,52,27,64,40,auto box too large
+Training,glioma,Tr-gl_258.jpg,fix,54,34,79,54,auto box covers only part
+Training,glioma,Tr-gl_1256.jpg,fix,54,37,80,72,auto box on ventricle
+Training,glioma,Tr-gl_1173.jpg,ok,,,,,
+Training,glioma,Tr-gl_879.jpg,fix,41,39,52,57,subtle heterogeneous area
+Training,glioma,Tr-gl_20.jpg,fix,54,30,68,43,hypointense lesion
+Training,glioma,Tr-gl_72.jpg,fix,25,37,49,62,mass on other side of auto box
+Training,glioma,Tr-gl_848.jpg,drop,,,,,no clear lesion
+Training,glioma,Tr-gl_1269.jpg,ok,,,,,
+Training,glioma,Tr-gl_31.jpg,fix,30,30,50,56,subtle mass effect
+Training,glioma,Tr-gl_1180.jpg,drop,,,,,no clear lesion
+Training,glioma,Tr-gl_1134.jpg,drop,,,,,no clear lesion
+Training,glioma,Tr-gl_347.jpg,fix,54,27,70,43,
+Training,glioma,Tr-gl_608.jpg,fix,47,47,57,59,ring lesion; auto box too large
+Training,glioma,Tr-gl_770.jpg,drop,,,,,no clear lesion
+Training,glioma,Tr-gl_1184.jpg,drop,,,,,no clear lesion
+Training,glioma,Tr-gl_390.jpg,drop,,,,,no clear lesion
+Training,glioma,Tr-gl_539.jpg,ok,,,,,
+Training,glioma,Tr-gl_320.jpg,drop,,,,,no clear lesion
+Training,glioma,Tr-gl_865.jpg,drop,,,,,no clear lesion
+Training,glioma,Tr-gl_919.jpg,ok,,,,,
+Training,glioma,Tr-gl_1375.jpg,fix,57,26,69,39,ring lesion; auto box too large
+Training,glioma,Tr-gl_757.jpg,fix,40,38,60,52,
+Training,glioma,Tr-gl_554.jpg,drop,,,,,no clear lesion
+Training,glioma,Tr-gl_7.jpg,fix,52,33,70,54,cystic area
+Training,glioma,Tr-gl_218.jpg,fix,32,26,50,46,ring lesion
+Training,glioma,Tr-gl_1112.jpg,fix,34,42,50,57,
+Training,glioma,Tr-gl_75.jpg,ok,,,,,
+Training,glioma,Tr-gl_1023.jpg,ok,,,,,
+Training,glioma,Tr-gl_1170.jpg,ok,,,,,
+Training,glioma,Tr-gl_473.jpg,ok,,,,,
+Training,glioma,Tr-gl_970.jpg,fix,61,32,74,47,ring lesion; auto box too large
+Training,glioma,Tr-gl_891.jpg,drop,,,,,box on skull base; no lesion seen
+Training,glioma,Tr-gl_100.jpg,drop,,,,,subtle only
+Training,glioma,Tr-gl_867.jpg,drop,,,,,no clear lesion
+Training,glioma,Tr-gl_648.jpg,drop,,,,,no clear lesion
+Training,glioma,Tr-gl_352.jpg,ok,,,,,
+Training,glioma,Tr-gl_188.jpg,fix,65,41,76,53,ring lesion; auto box too large
+Training,glioma,Tr-gl_338.jpg,drop,,,,,no clear lesion
+Training,glioma,Tr-gl_1113.jpg,ok,,,,,
+Training,glioma,Tr-gl_1350.jpg,ok,,,,,
+Training,glioma,Tr-gl_785.jpg,fix,56,33,74,56,
+Training,glioma,Tr-gl_147.jpg,drop,,,,,box on sella; no lesion seen
+Training,glioma,Tr-gl_178.jpg,fix,35,20,46,32,ring lesion outside auto box
+Training,glioma,Tr-gl_1260.jpg,fix,63,31,79,52,cystic area; moderate confidence
+Training,glioma,Tr-gl_74.jpg,drop,,,,,uncertain
+Training,glioma,Tr-gl_564.jpg,ok,,,,,
+Testing,glioma,Te-gl_140.jpg,ok,,,,,
+Testing,glioma,Te-gl_136.jpg,drop,,,,,no clear lesion
+Testing,glioma,Te-gl_246.jpg,drop,,,,,unclear
+Testing,glioma,Te-gl_333.jpg,drop,,,,,no clear lesion
+Testing,glioma,Te-gl_324.jpg,drop,,,,,no clear lesion
+Testing,glioma,Te-gl_149.jpg,ok,,,,,
+Testing,glioma,Te-gl_238.jpg,ok,,,,,looks identical to Te-gl_140
+Testing,glioma,Te-gl_353.jpg,fix,44,54,66,76,posterior fossa mass; auto box on orbit
+Testing,glioma,Te-gl_233.jpg,fix,28,31,47,50,cystic ring lesion
+Testing,glioma,Te-gl_64.jpg,drop,,,,,box on sella; no lesion seen
+Testing,glioma,Te-gl_156.jpg,ok,,,,,
+Testing,glioma,Te-gl_351.jpg,fix,22,38,46,62,auto box in image corner
+Testing,glioma,Te-gl_252.jpg,ok,,,,,
+Testing,glioma,Te-gl_348.jpg,drop,,,,,no clear lesion
+Testing,glioma,Te-gl_193.jpg,ok,,,,,
+Testing,glioma,Te-gl_377.jpg,fix,42,39,63,58,
+Testing,glioma,Te-gl_37.jpg,drop,,,,,box on sella; no lesion seen
+Testing,glioma,Te-gl_231.jpg,ok,,,,,
+Testing,glioma,Te-gl_303.jpg,fix,50,44,72,63,T2 slice; auto box in image corner
+Testing,glioma,Te-gl_374.jpg,drop,,,,,unclear

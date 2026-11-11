@@ -1,0 +1,7 @@
+class        n   v1 meanIoU  v1 IoU>=.5   v2 meanIoU  v2 IoU>=.5
+glioma       48       0.290      12.5%       0.585      47.9%
+meningioma   75       0.344      14.7%       0.740      70.7%
+pituitary    64       0.096       0.0%       0.560      54.7%
+ALL         187       0.245       9.1%       0.639      59.4%
+
+verdicts: {'glioma': {'drop': 32, 'fix': 26, 'ok': 22}, 'meningioma': {'ok': 45, 'drop': 5, 'fix': 30}, 'pituitary': {'fix': 34, 'ok': 30, 'drop': 16}}

@@ -1,0 +1,10 @@
+# Versions used for the results in this repository.
+# For GPU, install torch/torchvision from https://pytorch.org with the CUDA build that matches your driver.
+torch==2.9.0
+torchvision==0.24.0
+ultralytics==8.4.14
+opencv-python==4.12.0.88
+scikit-learn==1.5.2
+matplotlib==3.9.2
+numpy==2.2.6
+pillow
