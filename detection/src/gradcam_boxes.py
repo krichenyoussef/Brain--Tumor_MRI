@@ -20,7 +20,9 @@ from torchvision import models, transforms
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA, OUT, LAB = ROOT / "data", ROOT / "outputs", ROOT / "labels" / "auto"
+import sys; sys.path.insert(0, str(Path(__file__).resolve().parent))
+from paths import DATA_DIR  # noqa: E402  (Kaggle images, see paths.py)
+DATA, OUT, LAB = DATA_DIR, ROOT / "outputs", ROOT / "labels" / "auto"
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 CAM_THRESH = float(os.environ.get("CAM_THRESH", 0.45))   # fraction of CAM max

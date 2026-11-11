@@ -13,6 +13,8 @@ from pathlib import Path
 import cv2, numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
+import sys; sys.path.insert(0, str(Path(__file__).resolve().parent))
+from paths import DATA_DIR  # noqa: E402  (Kaggle images, see paths.py)
 LAB = ROOT / "labels"
 
 
@@ -62,7 +64,7 @@ txt = "\n".join(lines); print(txt)
 out = ROOT / "outputs" / "annot"; S = 300; tiles = []
 for r in review:
     k = (r["split"], r["cls"], r["file"])
-    img = cv2.imread(str(ROOT / "data" / k[0] / k[1] / k[2])); H, W = img.shape[:2]
+    img = cv2.imread(str(DATA_DIR / k[0] / k[1] / k[2])); H, W = img.shape[:2]
     sx, sy = S / W, S / H; img = cv2.resize(img, (S, S))
     a = box(v2[k])
     if a: cv2.rectangle(img, (int(a[0] * sx), int(a[1] * sy)), (int(a[2] * sx), int(a[3] * sy)), (0, 255, 0), 1)

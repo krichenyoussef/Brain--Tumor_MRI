@@ -22,7 +22,9 @@ from torchvision import models, transforms
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA, OUT = ROOT / "data", ROOT / "outputs"
+import sys; sys.path.insert(0, str(Path(__file__).resolve().parent))
+from paths import DATA_DIR  # noqa: E402  (Kaggle images, see paths.py)
+DATA, OUT = DATA_DIR, ROOT / "outputs"
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 SEARCH_T = 0.30        # CAM level that defines the search region

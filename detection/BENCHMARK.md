@@ -85,6 +85,8 @@ These numbers use the original Kaggle split, so treat them as an upper bound.
 
 ## Reproduce
 
+From inside the `detection/` folder:
+
 ```bash
 bash outputs/run_bench.sh
 python src/make_benchmark_charts.py

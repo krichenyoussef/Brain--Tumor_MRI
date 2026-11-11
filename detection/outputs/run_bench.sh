@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Benchmark chain: detectors, classifier backbones, then detection scoring.
-cd "/c/Users/Youss/OneDrive/Bureau/Brain_Tumor"
+cd "$(dirname "$0")/.."   # run from the detection/ folder
 L=outputs/bench_log.txt; : > $L
 echo "[$(date +%T)] yolo gold start" >> $L
 python src/train_yolo.py gold 100 > outputs/yolo_gold_stdout.txt 2>&1; echo "[$(date +%T)] yolo gold exit $?" >> $L

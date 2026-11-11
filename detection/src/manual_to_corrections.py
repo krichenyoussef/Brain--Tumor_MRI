@@ -12,6 +12,8 @@ from pathlib import Path
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
+import sys; sys.path.insert(0, str(Path(__file__).resolve().parent))
+from paths import DATA_DIR  # noqa: E402  (Kaggle images, see paths.py)
 LAB = ROOT / "labels"
 rows = list(csv.DictReader(open(LAB / "manual_review.csv")))
 corr, ok = [], []
@@ -21,7 +23,7 @@ for r in rows:
     if v == "ok":
         ok.append(key)
     elif v == "fix":
-        W, H = Image.open(ROOT / "data" / r["split"] / r["cls"] / r["file"]).size
+        W, H = Image.open(DATA_DIR / r["split"] / r["cls"] / r["file"]).size
         x1, y1, x2, y2 = (float(r[k]) / 100 for k in ("x1p", "y1p", "x2p", "y2p"))
         corr.append(key + [round(x1 * W), round(y1 * H), round(x2 * W), round(y2 * H), r.get("note", "")])
     elif v == "drop":

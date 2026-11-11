@@ -1,7 +1,11 @@
 # Brain tumor MRI: classification and bounding-box labels
 
-The source dataset (`data/`) has 7,200 MRI slices in 4 classes (glioma, meningioma, notumor, pituitary) with **class labels only**.
-This project turns it into a **detection dataset** (boxes around the tumor) without a radiologist, in 7 steps.
+The Kaggle dataset has 7,200 MRI slices in 4 classes (glioma, meningioma, notumor, pituitary) with **class labels only**.
+This project turns it into a **detection dataset** (boxes around the tumor) without a radiologist, in 7 steps,
+then benchmarks detectors and classifiers on it.
+
+This folder is the detection part of the repository. The repository root holds the main classification project,
+which builds a duplicate-free split. **Run every command below from inside this `detection/` folder.**
 
 > These boxes were drawn by a non-expert (an AI reviewer) and by an automatic method. They are fine for learning and
 > prototyping object detection. They are **not** clinical ground truth.
@@ -10,8 +14,8 @@ This project turns it into a **detection dataset** (boxes around the tumor) with
 
 | Path | What it is |
 |---|---|
-| `data/` | Original images, never modified |
-| `src/` | All scripts, one per step |
+| `../data/raw/` | Original images, shared with the main project and never modified (see Setup) |
+| `src/` | All scripts, one per step. `src/paths.py` finds the images |
 | `outputs/` | Model, reports, review images |
 | `labels/` | All box files (CSV + YOLO txt) |
 | `yolo_full/`, `yolo_gold/` | Ready-to-train YOLO datasets |
@@ -173,6 +177,11 @@ python src/make_benchmark_charts.py
 pip install -r requirements.txt
 ```
 
-The dataset is not in the repository. Download the Kaggle "Brain Tumor MRI Dataset" and place it as
-`data/Training/<class>/` and `data/Testing/<class>/`. Model weights, the YOLO dataset copies and the review sheets
-are also excluded to keep the repository small. The scripts above regenerate them.
+The dataset is not in the repository. Download the Kaggle "Brain Tumor MRI Dataset" once, at the repository root,
+exactly as the main project's README describes: `data/raw/Training/<class>/` and `data/raw/Testing/<class>/`.
+Both projects then use the same copy. `src/paths.py` looks in `../data/raw`, then `../data`, then `data/`,
+and the `BRAIN_TUMOR_DATA` environment variable overrides all of them.
+
+Model weights, the YOLO dataset copies and the review sheets are excluded to keep the repository small.
+The scripts above regenerate them. `yolo_full/` and `yolo_gold/` must be rebuilt on a new machine,
+because their `data.yaml` files store an absolute path.

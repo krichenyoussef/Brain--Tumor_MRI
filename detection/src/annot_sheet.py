@@ -11,6 +11,8 @@ from pathlib import Path
 import cv2, numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
+import sys; sys.path.insert(0, str(Path(__file__).resolve().parent))
+from paths import DATA_DIR  # noqa: E402  (Kaggle images, see paths.py)
 lst, prefix = sys.argv[1], sys.argv[2]
 per = int(sys.argv[3]) if len(sys.argv) > 3 else 4
 boxes_csv = sys.argv[4] if len(sys.argv) > 4 else "auto_boxes_v2.csv"
@@ -21,7 +23,7 @@ outdir = ROOT / "outputs" / "annot"; outdir.mkdir(parents=True, exist_ok=True)
 
 
 def tile(idx, it):
-    img = cv2.imread(str(ROOT / "data" / it["split"] / it["cls"] / it["file"]))
+    img = cv2.imread(str(DATA_DIR / it["split"] / it["cls"] / it["file"]))
     H, W = img.shape[:2]
     img = cv2.resize(img, (S, S))
     for k in range(1, 10):

@@ -18,6 +18,8 @@ import csv, random, shutil, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+import sys; sys.path.insert(0, str(Path(__file__).resolve().parent))
+from paths import DATA_DIR  # noqa: E402  (Kaggle images, see paths.py)
 MODE = sys.argv[1] if len(sys.argv) > 1 else "full"
 assert MODE in ("full", "gold")
 DST = ROOT / f"yolo_{MODE}"
@@ -41,7 +43,7 @@ for part, items in (("train", train), ("val", val)):
     (DST / "labels" / part).mkdir(parents=True, exist_ok=True)
     for r in items:
         stem = Path(r["file"]).stem
-        shutil.copy2(ROOT / "data" / r["split"] / r["cls"] / r["file"], DST / "images" / part / r["file"])
+        shutil.copy2(DATA_DIR / r["split"] / r["cls"] / r["file"], DST / "images" / part / r["file"])
         shutil.copy2(ROOT / "labels" / "final" / r["split"] / r["cls"] / f"{stem}.txt", DST / "labels" / part / f"{stem}.txt")
 
 (DST / "data.yaml").write_text(

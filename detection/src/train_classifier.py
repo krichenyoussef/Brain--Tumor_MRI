@@ -21,7 +21,9 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "data"
+import sys; sys.path.insert(0, str(Path(__file__).resolve().parent))
+from paths import DATA_DIR  # noqa: E402  (Kaggle images, see paths.py)
+DATA = DATA_DIR
 ARCH = os.environ.get("ARCH", "resnet50")
 OUT = ROOT / os.environ.get("OUT_DIR", "outputs")    # default keeps the original outputs/model.pt
 OUT.mkdir(parents=True, exist_ok=True)
